@@ -51,7 +51,7 @@ class PlayGameUseCaseUnitTest {
         var response = useCase.handle(new PlayGameUseCase.Request(PLAYER_BET, MAX_NUMBER));
 
         // then
-        assertThat(response.winningAmount()).isEqualTo(BigDecimal.valueOf(4009.50).setScale(2, RoundingMode.HALF_UP));
+        assertThat(response.winningAmount()).isEqualByComparingTo(BigDecimal.valueOf(4009.5));
     }
 
     @Test
